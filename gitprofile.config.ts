@@ -116,14 +116,21 @@ const CONFIG = {
   ],
   experiences: [
     {
-      company: 'iVedha',
-      position: 'Software Engineer',
-      from: 'January 2024',
+      company: 'Cove Island, Sri Lanka',
+      position: 'Python Developer',
+      from: 'July 2024',
       to: 'Present',
       companyLink: '',
     },
     {
-      company: 'Kihara Lab @ Purdue University',
+      company: 'iVedha, Canada',
+      position: 'Software Engineer',
+      from: 'January 2024',
+      to: 'July 2024',
+      companyLink: '',
+    },
+    {
+      company: 'Kihara Lab @ Purdue University, USA',
       position: 'Research Scholar',
       from: 'October 2022',
       to: 'February 2023',
