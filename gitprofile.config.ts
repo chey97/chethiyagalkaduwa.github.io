@@ -173,7 +173,7 @@ const CONFIG = {
       conferenceName: 'International Conference on Advances in Computing and Technology and Student Symposium 2023',
       journalName: 'Abstract',
       authors: 'Chethiya Galkaduwa, Hansi Yashodhara',
-      link: 'https://www.techrxiv.org/users/711672/articles/696138-leveraging-key-value-nosql-databases-for-enhanced-decision-support-systems-a-comparative-analysis',
+      link: '',
       description:
         '',
     },
