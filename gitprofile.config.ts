@@ -10,60 +10,10 @@ const CONFIG = {
    * for example your repository is at https://github.com/arifszn/portfolio, then set base to '/portfolio/'.
    */
   base: '/',
-  projects: {
-
-    github: {
-      display: true, // Display GitHub projects?
-      header: 'Github Projects',
-      mode: 'manual', // Mode can be: 'automatic' or 'manual'
-      automatic: {
-        sortBy: 'stars', // Sort projects by 'stars' or 'updated'
-        limit: 6, // How many projects to display.
-        exclude: {
-          forks: false, // Forked projects will not be displayed if set to true.
-          projects: [], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
-        },
-      },
-      manual: {
-        // Properties for manually specifying projects
-        projects: [
-        'chey97/django-drf-ecommerce ',
-        'chey97/miniGPT',
-        'chey97/django-drf-channels-react-project-Chat ',
-        'chey97/ProteinSeq_Classifier ',
-        'chey97/DNASeq-Classifier ',
-        'chey97/HandTrackingModule  ',
-        'chey97/simpleBOT  ',
-        'chey97/GesturePlayPauseControl--AppleScript  ',
-      ],
-      },
-    },
-    // external: {
-    //   header: 'My Projects',
-    //   // To hide the `External Projects` section, keep it empty.
-    //   projects: [
-    //     {
-    //       title: 'Project Name',
-    //       description:
-    //         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-    //       imageUrl:
-    //         'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-    //       link: 'https://example.com',
-    //     },
-    //     {
-    //       title: 'Project Name',
-    //       description:
-    //         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-    //       imageUrl:
-    //         'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-    //       link: 'https://example.com',
-    //     },
-    //   ],
-    // },
-  },
+  
   seo: {
     title: 'Chethiya Galkaduwa',
-    description: 'Portfolio of Chethiya Galkaduwa',
+    description: 'chethiya galkaduwa',
     imageURL: '',
   },
   social: {
@@ -88,10 +38,10 @@ const CONFIG = {
     phone: '',
     email: 'chethiya.galkaduwa@gmail.com',
   },
-  // resume: {
-  //   fileUrl:
-  //     'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
-  // },
+  resume: {
+    fileUrl:
+      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+  },
   skills: [
     'Python',
     'Django',
@@ -110,9 +60,9 @@ const CONFIG = {
     'Sequential Modeling'
   ],
   research: [
-    'Natural Language Processing',
     'Machine Learning',
     'Computer Vision',
+    'Cognitive Computing',
   ],
   experiences: [
     
@@ -127,7 +77,7 @@ const CONFIG = {
       company: 'Cove Island, Sri Lanka',
       position: 'Python Developer',
       from: 'July 2024',
-      to: 'September 2024',
+      to: 'October 2024',
       companyLink: 'https://coveisland.lk',
     },
     {
@@ -154,6 +104,12 @@ const CONFIG = {
   //   },
   // ],
   educations: [
+    {
+      institution: 'Indiana University, Indianapolis, USA',
+      degree: 'Ph.D. in Computer Science',
+      from: '2025',
+      to: '2030',
+    },
     {
       institution: 'University of Kelaniya',
       degree: 'B.Sc.(Honours) in Computer Science',
@@ -220,7 +176,7 @@ const CONFIG = {
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'lofi',
+    defaultTheme: 'light',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
@@ -245,7 +201,7 @@ const CONFIG = {
       // 'retro',
       // 'cyberpunk',
       // 'valentine',
-      'halloween',
+      // 'halloween',
       // 'garden',
       // 'forest',
       // 'aqua',
