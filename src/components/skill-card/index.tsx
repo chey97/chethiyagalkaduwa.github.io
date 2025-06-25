@@ -17,23 +17,28 @@ import {
   SiGooglecolab,
 } from 'react-icons/si';
 
-const skillList = [
-  { name: 'Python', icon: <FaPython /> },
-  { name: 'Django', icon: <SiDjango /> },
-  { name: 'JavaScript', icon: <SiJavascript /> },
-  { name: 'React.js', icon: <FaReact /> },
-  { name: 'Node.js', icon: <FaNodeJs /> },
-  { name: 'Git', icon: <FaGitAlt /> },
-  { name: 'CSS', icon: <SiCss3 /> },
-  { name: 'TensorFlow', icon: <SiTensorflow /> },
-  { name: 'PyTorch', icon: <SiPytorch /> },
-  { name: 'OpenCV', icon: <SiOpencv /> },
-  { name: 'Jupyter', icon: <SiJupyter /> },
-  { name: 'VS Code', icon: <SiVisualstudiocode /> },
-  { name: 'Google Colab', icon: <SiGooglecolab /> },
-];
+interface Props {
+  loading: boolean;
+  skills: string[];
+}
 
-const SkillCard = ({ loading }: { loading: boolean }) => {
+const iconMap: Record<string, JSX.Element> = {
+  Python: <FaPython />,
+  Django: <SiDjango />,
+  JavaScript: <SiJavascript />,
+  'React.js': <FaReact />,
+  'Node.js': <FaNodeJs />,
+  Git: <FaGitAlt />,
+  CSS: <SiCss3 />,
+  Tensorflow: <SiTensorflow />,
+  Pytorch: <SiPytorch />,
+  OpenCV: <SiOpencv />,
+  Jupyter: <SiJupyter />,
+  'VS Code': <SiVisualstudiocode />,
+  'Google Collab': <SiGooglecolab />,
+};
+
+const SkillCard = ({ loading, skills }: Props) => {
   const renderSkeleton = () => {
     return Array.from({ length: 12 }, (_, index) => (
       <div
@@ -53,15 +58,18 @@ const SkillCard = ({ loading }: { loading: boolean }) => {
         <div className="grid grid-cols-2 gap-3">
           {loading
             ? renderSkeleton()
-            : skillList.map((skill, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-3 bg-base-200 px-3 py-2 rounded-lg text-sm font-medium text-base-content shadow-sm hover:bg-base-300 transition-all"
-                >
-                  <span className="text-xl">{skill.icon}</span>
-                  <span>{skill.name}</span>
-                </div>
-              ))}
+            : skills.map((skillName, index) => {
+                const icon = iconMap[skillName] || null;
+                return (
+                  <div
+                    key={index}
+                    className="flex items-center gap-3 bg-base-200 px-3 py-2 rounded-lg text-sm font-medium text-base-content shadow-sm hover:bg-base-300 transition-all"
+                  >
+                    {icon && <span className="text-xl">{icon}</span>}
+                    <span>{skillName}</span>
+                  </div>
+                );
+              })}
         </div>
       </div>
     </div>
