@@ -16,7 +16,7 @@ const HeadTagEditor: React.FC<HeadTagEditorProps> = ({
   const title = 'Chethiya Galkaduwa | Portfolio';
   const description = 'Ph.D. researcher, software engineer, and AI enthusiast – building smart systems and solving real-world problems.';
   const siteUrl = 'https://chethiyagalkaduwa.github.io';
-  const imageUrl = `${siteUrl}/preview.png`; // Put preview.png in public/
+  const imageUrl = `${siteUrl}/preview.png`; // Make sure preview.png exists in public/
 
   return (
     <Helmet>
@@ -36,6 +36,8 @@ const HeadTagEditor: React.FC<HeadTagEditorProps> = ({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={imageUrl} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
 
       {/* Twitter Card Meta */}
       <meta name="twitter:card" content="summary_large_image" />
